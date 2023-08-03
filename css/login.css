@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins",sans-serif;
+}
+.menu-btn{
+  color: #424144;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar{
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  height: 80px;
+}
+
+.navbar .logo {
+  width: 150px;
+  height: 80px;
+  /* border: 2px solid red; */
+  /* border-bottom: 2px solid #0fa94a; */
+}
+.navbar .logo img{
+  width: 150px;
+  height: 79px;
+ 
+  /* border-bottom: 2px solid #0fa94a; */
+}
+
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a{
+  display: block;
+  margin-left: 20px;
+  color: white;
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+  font-size: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px 13px;
+  border-radius: 3px;
+
+}
+
+.navbar .menu li a.active,
+.navbar .menu li a:hover{
+  background-color: white;
+  color: #27ae60;
+}
+
+.navbar .menu li a i{
+  color: #055423;
+}
+.navbar .menu li a i:hover{
+  color: #055423;
+}
+.container{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #2ecc71 30%, #27ae60 30.1%), url(images/technology-particle-dots-5g-digital-corporate-background.jpg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.form-box{
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  background: #fff;
+  padding: 5px;
+  overflow: hidden;
+}
+.button-box{
+  width: 220px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #27ae60;
+  border-radius: 30px;
+}
+.toggle-btn{
+  padding: 10px 30px;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: none;
+  position: relative;
+}
+#btn{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 110px;
+  height: 100%;
+  background: linear-gradient(to right, #27ae60,#2ecc71);
+  border-radius: 30px;
+  transition: .5s;
+}
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* background-color: #27ae60; */
+
+ text-align: center;
+
+ list-style: none;
+}
+.social-icons li{
+ margin: 0 12px;
+ /* background-color: #27ae60; */
+ width: 20px;
+ text-align: center;
+}
+.icon{
+  font-size: 2em;
+ color: #27ae60;
+}
+a:hover .icon {
+  color: blue;
+  font-size: 2.1em;
+}
+.input-group{
+  top: 180px;
+  position: absolute;
+  width: 280px;
+  transition: .5s;
+
+}
+.input-field{
+  width: 100%;
+  padding:10px 0;
+  margin: 5px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background: transparent;
+}
+.submit-btn{
+  width: 85%;
+  padding: 10px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  background: linear-gradient(to right, #27ae60,#2ecc71);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  box-shadow: 0 0 0 4px #fff, 0 0 0 8px #27ae60;
+}
+
+.check-box{
+  margin: 30px 10px 30px 0;
+}
+span{
+  color: #777;
+  font-size: 12px;
+  font-weight: 700;
+  bottom: 63px;
+  position: absolute;
+}
+#login{
+  left: 50px;
+}
+#register{
+  left: 450px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  /* background-color: #4caf50; */
+  background: rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 820px){
+
+  .menu-btn{
+      display: block;
+      z-index: 999;
+  }
+
+  .menu-btn i.active::before{
+      content: "\f00d";
+  }
+  
+  .navbar .menu{
+      position: fixed ;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      bottom: 0;
+      background-color: #055423;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+      left: 0;
+  }
+
+  .navbar .menu li{
+      display: flex;
+      justify-content: center;
+  }
+
+  .navbar .menu li a {
+      margin: 10px 0;
+      font-size: 25px;
+  }
+    
+}
+
+/* Medium screens */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+ 
+  
+  .menu-btn{
+      display: block;
+      z-index: 999;
+  }
+
+  .menu-btn i.active::before{
+      content: "\f00d";
+  }
+  
+  .navbar .menu{
+      position: fixed ;
+      height: 100vh;
+      width: 100%;
+      left: -100%;
+      top: 0;
+      background-color: #055423;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+      left: 0;
+  }
+
+  .navbar .menu li{
+      display: flex;
+      justify-content: center;
+  }
+
+  .navbar .menu li a {
+      margin: 10px 0;
+      font-size: 25px;
+  }
+
+}

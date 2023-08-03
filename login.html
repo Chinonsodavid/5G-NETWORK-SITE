@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login or Register</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="shortcut icon" href="img/profile.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/all.css" />
+
+
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo"><img src="img/cover.png" alt=""></div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="About Us CLS_5G.html">About</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+            <li><a href="login.html"  class="active">Login</a></li>
+            <!-- <li><a href=""><i class="fas fa-shopping-cart"></i>(0)</a></li> -->
+        </ul> 
+
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+        <div>
+          <ul class="social-icons">
+            <li>
+              <a href="https://www.google.com/url?client=internal-element-cse&cx=0903a1a109a46b6e5&q=https://www.facebook.com/&sa=U&ved=2ahUKEwjI7MOj38P_AhVRVaQEHSI_AGYQFnoECAkQAQ&usg=AOvVaw1vFgyfEbleqxGty0N7nJGs&arm=e"><ion-icon name="logo-facebook" class="icon"></ion-icon></a>
+              <i class="icon"></i>
+            </li>
+            <!-- <li>
+              <a href="#"><ion-icon name="logo-twitter" class="icon"></ion-icon></a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="logo-linkedin" class="icon"></ion-icon></a>
+            </li> -->
+            <li>
+              <a href="https://www.google.com/url?client=internal-element-cse&cx=0903a1a109a46b6e5&q=https://www.instagram.com/accounts/login/&sa=U&ved=2ahUKEwiG0Ke13sP_AhWViVwKHZpbBZcQFnoECAUQAQ&usg=AOvVaw36HUmQSM6nb_H2XpRdDDZG&arm=e"><ion-icon name="logo-instagram" class="icon"></ion-icon></a>
+            </li>
+          </ul>
+          </div>
+          <form id="login" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"> <span>Remember Password</span>
+            
+            <button type="submit" class="submit-btn">Log in</button>
+
+          </form>
+          <form id="register" class="input-group">
+            <input type="text" class="input-field" placeholder="User Id" required>
+            <input type="email" class="input-field" placeholder="Email Address" required>
+            <input type="text" class="input-field" placeholder="Enter Password" required>
+            <input type="checkbox" class="check-box"> <span>I agree to the terms & conditions</span>
+            
+            <button type="submit" class="submit-btn">Register</button>
+
+          </form>
+
+      </div>
+    
+    </div>
+      <footer>
+        &copy; 2023 CLS 5G Telecommunication. All rights reserved.
+      </footer>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register(){
+        x.style.left= "-400px"
+        y.style.left= "50px"
+        z.style.left= "110px"
+        z.style.color = "white";
+        
+
+      }
+
+      function login(){
+        x.style.left= "50px";
+        y.style.left= "450px";
+        z.style.left= "0px";
+        z.style.color = "white";
+      }
+
+
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+     <!-- jquery -->
+     <script>
+      $(".menu-btn").click(function () {
+          $(".navbar .menu").toggleClass("active");
+          $(".menu-btn i").toggleClass("active");
+      });
+  </script>
+  </body>
+</html>

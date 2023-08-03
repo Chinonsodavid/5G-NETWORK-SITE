@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+.navbar .logo {
+    width: 150px;
+    height: 80px;
+    /* border: 2px solid red; */
+    /* border-bottom: 2px solid #0fa94a; */
+  }
+  .navbar .logo img{
+    width: 150px;
+    height: 79px;
+   
+    /* border-bottom: 2px solid #0fa94a; */
+  }
+  
+
+body {
+    width: 100%;
+    /* background: linear-gradient(90deg, #2ecc71 60%, #27ae6040.1%); */
+    background-color: #27ae60;
+}
+
+.about{
+    margin: 30px;
+    padding: 5px;
+}
+
+
+.about h1 {
+    text-align: center;
+    padding-top: 50px ;
+    margin-bottom: 40px;
+    color: white;
+    font-weight: bolder;
+    font-size: 50px;
+
+}
+
+
+/* .about h1::after{
+    content: "";
+    height: 4px;
+    width: 230px;
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+    display: block;
+    margin: auto;
+
+} */
+.about h4 {
+    text-align: center;
+    display: inline-block;
+}
+.about p{
+    text-align: center;
+    padding: 3px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    flex-wrap: wrap;
+    
+
+}
+.about-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: wheat;
+    padding: 80px 30px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, .6);
+}
+
+.about-item i{
+    font-size: 43px;
+    margin: 0;
+}
+
+.about-item p{
+    margin-top: 20px;
+
+}
+
+.aboutUs{
+    width: 85%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 75px auto;
+    text-align: center; 
+}
+
+.card{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 20px;
+    padding: 20px 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card:hover{
+    background-color: rgb(184, 212, 222);
+    transition: 0.4s ease;
+}
+
+.card .icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.card h2{
+    font-size: 35px;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+.card p{
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: black;
+}
+
+.button{
+    font-size: 15px;
+    text-decoration: none;
+    background-color: rgba(44, 103, 124, );
+    padding: 8px 12px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.button:hover{
+    background-color: #27ae60;
+    transition: 0.4s ease;
+}
+
+.icon{
+    width: 700px;
+    height: auto;
+    color:darkcyan
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
+}
+
+.menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+  
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    height: 80px;
+    z-index: 999;
+  
+}
+  
+.navbar .logo h1{
+    color: white;
+    /* border-bottom: 2px solid #0fa94a; */
+}
+  
+  .navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+  
+  .navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 13px;
+    border-radius: 3px;
+  
+}
+  
+  .navbar .menu li a.active,
+  .navbar .menu li a:hover{
+    background-color: white;
+    color: #27ae60;
+    /* border-bottom: 4px solid rgb(90, 228, 90); */
+}
+  
+  .navbar .menu li a i{
+    color: #055423;
+}
+  .navbar .menu li a i:hover{
+    color: #055423;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+  }

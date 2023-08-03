@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <title>pay</title>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="css/pay.css">
+    <link rel="shortcut icon" href="img/CLS5G.jpg" type="image/x-icon">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="img/cover.png" alt=""></div>
+        <ul class="menu">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="About Us CLS_5G.html">About</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="pay.html" class="active">Payment</a></li>
+            <li><a href=""><i class="fas fa-shopping-cart"></i>(0)</a></li>
+        </ul> 
+  
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+    <div class="container">
+
+
+        <form action="">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <h3 class="title">delivery addresss </h3>
+
+                    <div class="inputBox">
+                        <span>Full-name :
+                            <yes style="color: red;" />
+                        </span>
+                        <input type="text" placeholder="sunday leo" required id="name">
+                    </div>
+                    <div class="inputBox">
+                        <span>Email :</span>
+                        <input type="email" placeholder="example@example.com" id="email" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>Address :</span>
+                        <input type="text" placeholder="street - locality" id="address" required>
+                    </div>
+                    <div class="inputBox">
+                        <span>City :</span>
+                        <input type="text" placeholder="Ikeja" id="city" required>
+                    </div>
+
+                    <div class="flex">
+                        <div class="inputBox">
+                            <span>state :</span>
+                            <input type="text" placeholder="Lagos" id="state" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Zip code :</span>
+                            <input type="text" placeholder="123456" maxlength="5" id="zip" required>
+                        </div>
+
+                    </div>
+
+                </div><!--closing for column-->
+
+                <div class="col">
+                    <h3 class="title">Payment </h3>
+
+                    <div class="inputBox">
+                        <span> Card acccepted</span>
+                        <img src="img/CREDIT.jpg" alt="">
+
+                    </div>
+
+                    <div class="inputBox">
+                        <span> Name on Card:</span>
+                        <input type="text" placeholder="mr. sunday leo" id="cardname" required>
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+                    <div class="inputBox icon-font">
+                        <span id="mycard">Credit Card Number:</span>
+                        <input type="number" placeholder="1111 2222 3333 4444" id="card" data-mask="0000000000000000" required>
+                        <i class="fa-regular fa-credit-card"></i>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox icon-font">
+                            <span id="expire">Expiry Year:</span>
+                            <input type="number" placeholder="0000" id="year" data-mask="0000" required>
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </div>
+                        <div class="inputBox icon-font">
+                            <span>CVC :</span>
+                            <input type="number" placeholder="000" data-mask="000" id="cvv" required>
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+
+                    </div>
+
+                </div><!--closing for column2-->
+
+            </div><!--closing for row -->
+
+            <button type="submit" onclick="valid()" class="submit-btn" id="submit">CHECKOUT</button>
+
+        </form>
+
+    </div><!--closing container -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="sweetalert2.min.js"></script>
+
+    <script>
+        // let name = document.getElementById("name");
+        // let email = document.getElementById("email");
+        // let address = document.getElementById("address");
+        // let city = document.getElementById("city");
+        // let state = document.getElementById("state");
+        // let zip = document.getElementById("zip");
+        // let namecard = document.getElementById("cardname");
+        // let cardnum = document.getElementById("card");
+        // let exyear =document.getElementById("year");
+        // let cvv = document.getElementById("cvv");
+        // let button = document.getElementById("validate").disabled = true;
+        // name.oninput = function(){
+        //     if(name.value != "" && email.value !="" && address.value !="" && city.value !="" && state.value !="" && zip.value !="" 
+        //     && namecard.value !="" && cardnum.value !="" && exyear.value !="" && cvv.value !=""){
+        //        let button = document.getElementById("validate").disabled =false;
+        //     }
+        //     else{
+        //        let button= document.getElementById("validate").disabled = true;
+        //     }
+        // }
+    </script>
+
+
+    <script type="text/javascript">
+        // $(document).ready(function () {
+        //     $('#exclam').mask('00 / 00');
+        //     $('#card').mask('9999-9999-9999-9999');
+        // })
+
+
+        $('#submit').click(function () {
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var cardname = $("#cardname").val();
+            var Year = $('#exclam').val();
+
+            if (name == '' || email == '' || cardname == "" || Year == '') {
+                // alert('fill in the missing column')
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'error!!',
+                    text: 'please fill in the missing column',
+                    type: 'thankyou'
+                })
+                return;
+            } else if(!name == '' || !email == '' || !cardname == "" || !Year == '') {
+                Swal.fire(
+                    'Good job!',
+                    'You clicked the button!',
+                    'success',
+                ).then(function () {
+                    window.location = "index.html";
+
+                });
+            }
+        })
+    </script>
+
+    <!-- <script type="text/javascript">
+        // function valid() {
+        //     var name = $("#name").val();
+        //     var email = $("#email").val();
+        //     var cardname= $("#cardname").val();
+        //     if (name == '' || email == '') {
+        //         Swal.fire({
+        //             icon: 'error',
+        //             title: 'Oops...',
+        //             text: 'Something went wrong!',
+        //             footer: '<a href="">Why do I have this issue?</a>'
+        //         })
+        //     }else{
+        //     Swal.fire({
+        //             title:'Good job!',
+        //             text: 'You have successfully Paid for this product',
+        //             type: 'success'
+        //         }).then(function () {
+        //             window.location = "index.html";
+
+        //         });
+        //     }
+        //     }
+        </script> -->
+    <script type="text/javascript">
+    //          function valid(onl) {
+    //     if (onl) {
+    //         Swal.fire({
+    //             title: 'Good job!',
+    //             text: 'You have successfully paid for this product!',
+    //             type: 'success'
+    //         }).then(function () {
+    //             window.location = "index.html";
+    //         });
+    //     } else {
+    //         Swal.fire({
+    //             title: 'Good job!',
+    //             text: 'Payment successful!',
+    //             type: 'success'
+    //         }).then(function () {
+    //             window.location = "index.html";
+    //         });
+    //     }
+    // }
+    </script>
+
+
+    <!-- <script> -->
+    <!-- if (name == '' || email == '') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                }).then(function(){
+                    alert('Refill This Page With a Valid Information ')
+                });
+            } 
+               
+            if((card.value.length = 16)) ((expiry.value.length > Date)) {
+                Swal.fire(
+                'Good job!',
+                'You successfull payed for the product',
+                'success'
+            ) 
+            }; 
+
+            
+        
+        
+        // Swal.fire({
+        //     icon: 'error',
+        //     title: 'Oops...',
+        //     text: 'Something went wrong!',
+        //     footer: '<a href="">Why do I have this issue?</a>'
+        // })
+
+        // Swal.fire({
+        //     title: 'sucessful',
+        //     text: 'Do you want to continue',
+        //     icon: 'sucess',
+        //     confirmButtonText: 'Cool'
+        // })
+ </script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins",sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+/* head */
+.menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+    height: 50px;
+}
+
+.navbar .logo {
+    width: 150px;
+    height: 80px;
+    /* border: 2px solid red; */
+    /* border-bottom: 2px solid #0fa94a; */
+  }
+  .navbar .logo img{
+    width: 150px;
+    height: 79px;
+   
+    /* border-bottom: 2px solid #0fa94a; */
+  }
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 13px;
+    border-radius: 3px;
+  
+}
+
+.navbar .menu li a.active,
+.navbar .menu li a:hover{
+    background-color: white;
+    color: #27ae60;
+}
+
+.navbar .menu li a i{
+    color: #055423;
+}
+.navbar .menu li a i:hover{
+    color: #055423;
+}
+
+
+/* ::content */
+.content{
+    /* background-image: url(/img/advertcls2.png); */
+    background-color: #27ae60;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #424144;
+    height: 100vh;
+}
+
+.content h1{
+    font-size: 40px;
+    color: white;
+}
+.content p{
+    font-size: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.content a button{
+    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    background: white;
+    color: #055423;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+  .content button:hover {
+    background-color: #27ae60;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 8px #27ae60;
+  }
+.pheading{
+    text-align: center;
+    margin: 50px 0;
+    color: #424144;
+}
+
+/* products */
+
+.sec{
+    padding: 10px 5px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.products .card{
+    width: 310px;
+    background: #f5f5f5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.products .card img{
+    height: 250px;
+    width: 100%;
+}
+.products .card img:hover{
+    transform: scale(1.1);
+    z-index: 2;
+}
+
+.products .card .desc {
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+
+.products .card .title{
+    font-weight: 900;
+    font-size: 20px;
+    color: #424144;
+    padding: 0 20px;
+}
+
+.products .card .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.products .card .box .price{
+  color: #0fa94a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.products .card .box .btn {
+    font-size: 13px;
+    color: #0fa94a;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid #0fa94a;
+    border-radius: 20px;
+}
+.products .card .box .btn a{
+    color: #0fa94a;
+    text-decoration: none;
+    font-size: 13px;
+
+    font-weight: 900;
+    /* border: 1px solid #0fa94a; */
+    /* border-radius: 20px; */
+}
+.products .card .box .btn a:hover{
+    cursor: progress;
+    background-color: #055423;
+    color: white;
+}
+
+.products .card .box .btn:hover{
+    cursor: pointer;
+    background-color: #055423;
+    color: white;
+}
+
+footer{
+    background-color: white;
+    height: 10vh;
+}
+footer p{
+    text-align: center;
+    line-height: 10vh;
+}
+footer p a{
+    text-decoration: none;
+    color: #0fa94a;
+    font-weight: bold;
+}
+
+/* responsive */
+@media (max-width: 820px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: "\f00d";
+    }
+    
+    .navbar .menu{
+        position: fixed ;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background-color: #055423;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+
+    .navbar .menu li{
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar .menu li a {
+        margin: 10px 0;
+        font-size: 25px;
+    }
+}

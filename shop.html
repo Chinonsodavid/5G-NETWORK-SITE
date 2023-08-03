@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="shortcut icon" href="img/profile.png" type="image/x-icon">
+    <title>shop</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo"><img src="img/cover.png" alt=""></div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="About Us CLS_5G.html">About</a></li>
+            <li><a href="Contact Us.html">Contact</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href=""><i class="fas fa-shopping-cart"></i>(0)</a></li>
+        </ul> 
+
+        <div class="menu-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+
+<!-- first section -->
+    <section class="content">
+        <h1>The New CLS Routers</h1>
+        <p>Get The Best Router In Town</p>
+        <a  rel="noopener" target="_blank" href="#shop-now"><button>Shop Now </button></a>
+    </section>
+    
+    <h1 class="pheading"> <a id="shop-now">Our New Routers</a></h1>
+<!-- second section  -->
+    <section class="sec">
+        <div class="products">
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router02.png" alt=""></div>
+                <div class="desc">CLS</div>
+                <div class="title">Dragon Router</div>
+                <div class="box">
+                    <div class="price">$2000</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router4 (4).png" alt=""></div>
+                <div class="desc">Wifi</div>
+                <div class="title">CLS Router</div>
+                <div class="box">
+                    <div class="price">$375</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router4 (3).png" alt=""></div>
+                <div class="desc">5g Routers</div>
+                <div class="title">Twine Router</div>
+                <div class="box">
+                    <div class="price">$2250</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router4 (2).png" alt=""></div>
+                <div class="desc">Wifi</div>
+                <div class="title">Desk Router</div>
+                <div class="box">
+                    <div class="price">$650</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router4 (1).png" alt=""></div>
+                <div class="desc">CLS Beast</div>
+                <div class="title">GTA-Gaming Router</div>
+                <div class="box">
+                    <div class="price">$40,000</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router1.webp" alt=""></div>
+                <div class="desc">Wifiber</div>
+                <div class="title">Homey Router</div>
+                <div class="box">
+                    <div class="price">$1,250</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router9.png" alt=""></div>
+                <div class="desc">5g Internet</div>
+                <div class="title">P-Down Router</div>
+                <div class="box">
+                    <div class="price">$900</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="img"><img src="img/router5 gamer.webp" alt=""></div>
+                <div class="desc">Pro Wifi</div>
+                <div class="title">Wild Beast</div>
+                <div class="box">
+                    <div class="price">$20,000</div>
+                    <button class="btn"><a href="pay.html">Buy Now</a></button>
+                </div>
+            </div>
+            <!-- card end -->
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Original Product @<a href="">CLS Router</a></p>
+    </footer>
+    
+
+    <!-- jquery -->
+    <script>
+        $(".menu-btn").click(function () {
+            $(".navbar .menu").toggleClass("active");
+            $(".menu-btn i").toggleClass("active");
+        });
+    </script>
+</body>
+</html>

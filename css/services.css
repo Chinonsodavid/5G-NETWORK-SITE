@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+   background-color: #4caf50;
+  }
+  .menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    /* z-index: 1; */
+    /* background-color:linear-gradient(90deg, #2ecc71 60%, #27ae60 40.1%);;
+    background-color: #055423;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3); */
+    background: rgba(0, 0, 0, 0.4);
+    height: 80px;
+
+}
+
+.navbar .logo h1{
+    color: white;
+    /* border-bottom: 2px solid #0fa94a; */
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 13px;
+    border-radius: 3px;
+  
+}
+
+.navbar .menu li a.active,
+.navbar .menu li a:hover{
+    background-color: white;
+    color: #27ae60;
+
+    /* border-bottom: 4px solid rgb(90, 228, 90); */
+}
+
+.navbar .menu li a i{
+    color: #055423;
+}
+.navbar .menu li a i:hover{
+    color: #055423;
+}
+  
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section {
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .service {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  
+  .service-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .service-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .service-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .section-title {
+      font-size: 24px;
+    }
+    
+    .service-icon {
+      font-size: 32px;
+    }
+    
+    .service-title {
+      font-size: 18px;
+    }
+    
+    .service-description {
+      font-size: 14px;
+    }
+  }
